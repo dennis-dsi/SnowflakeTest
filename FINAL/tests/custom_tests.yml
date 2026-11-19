@@ -1,0 +1,4 @@
+data_tests:
+    - name: assert_not_named_hannah
+      description:
+        Der Name `hannah` ist als Vorname nicht erlaubt.

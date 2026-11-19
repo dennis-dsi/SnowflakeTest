@@ -1,0 +1,10 @@
+FINAL:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      role: ACCOUNTADMIN
+      warehouse: CRITICAL_LOOT_WH
+      database: CRITICAL_LOOT
+      schema: FINAL
+      threads: 8

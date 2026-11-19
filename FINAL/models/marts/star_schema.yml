@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: fct_order_items
+    columns:
+      - name: order_item_id
+        data_tests: [unique, not_null]
+        
+      - name: order_status
+        data_tests:
+          - accepted_values:
+              values: ['CONFIRMED', 'FULFILLED', 'CANCELLED']
+              
+      - name: customer_version_key
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('dim_customers_history')
+              field: customer_version_key
+              
+      - name: product_id
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('dim_products')
+              field: product_id
+              
+  - name: dim_customers_history
+    columns:
+      - name: customer_version_key
+        data_tests: [unique, not_null]
+
+  - name: dim_customers
+    columns:
+      - name: customer_id
+        data_tests: [unique, not_null]
+        
+  - name: dim_products
+    columns:
+      - name: product_id
+        data_tests: [unique, not_null]
+        

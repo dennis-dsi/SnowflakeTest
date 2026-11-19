@@ -1,0 +1,4 @@
+order_status,status_label,status_rank
+CONFIRMED,Bestätigt,1
+FULFILLED,Erfüllt,2
+CANCELLED,Storniert,3

@@ -1,0 +1,16 @@
+version: 2
+
+snapshots:
+  - name: orders_snapshot
+    relation: source('erp', 'orders')
+    config:
+      unique_key: order_id
+      strategy: timestamp
+      updated_at: updated_at
+      
+  - name: customers_snapshot
+    relation: source('crm', 'customers')
+    config:
+      unique_key: customer_id
+      strategy: timestamp
+      updated_at: updated_at

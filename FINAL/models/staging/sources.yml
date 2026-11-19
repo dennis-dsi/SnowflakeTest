@@ -1,0 +1,34 @@
+version: 2
+
+sources:
+  - name: erp
+    database: CRITICAL_LOOT
+    schema: RAW_ERP
+    tables:
+      - name: orders
+        identifier: ORDERS
+      - name: order_items
+        identifier: ORDER_ITEMS
+      - name: products
+        identifier: PRODUCTS
+      - name: franchises
+        identifier: FRANCHISES
+      - name: product_categories
+        identifier: PRODUCT_CATEGORIES
+      - name: platforms
+        identifier: PLATFORMS
+      - name: invoices
+        identifier: INVOICES
+      - name: invoice_items
+        identifier: INVOICE_ITEMS
+      - name: payments
+        identifier: PAYMENTS
+
+  - name: crm
+    database: CRITICAL_LOOT
+    schema: RAW_CRM
+    tables:
+      - name: customers
+        identifier: CUSTOMERS
+      - name: customer_segments
+        identifier: CUSTOMER_SEGMENTS
